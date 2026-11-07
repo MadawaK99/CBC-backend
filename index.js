@@ -43,6 +43,7 @@ mongoose.connect("mongodb://admin:123@ac-x6lbrxr-shard-00-00.koq0ruc.mongodb.net
 app.use("/products",productRouter);
 app.use("/users",userRouter); 
 app.use("/orders",orderRouter);
+app.use("/reviews",reviewRouter);
 
 app.listen(5000,()=>{console.log('server is running on port 5000')});
 
