@@ -110,7 +110,7 @@ export async function getProductById(req,res){
         const product = await Product.findOne({productId:productId})
         if(product ==null){
             res.status(404).json({
-                message:"Product not found";
+                message:"Product not found"
             })
             return
         }
@@ -120,7 +120,7 @@ export async function getProductById(req,res){
         }else{
             if(!isAdmin(req)){
                 res.status(404).json({
-                    message:"Product not found";
+                    message:"Product not found"
                 })
                 return
             }else{
@@ -128,6 +128,6 @@ export async function getProductById(req,res){
             }
         }
 
-    }catch(err)
+    }catch(err){}
 
 }
